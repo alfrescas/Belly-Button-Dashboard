@@ -134,16 +134,16 @@ Plotly.newPlot("gauge", [gaugeData], gaugeLayout);
 
 //Create the trace for the bubble chart.
     var bubbleData = {
-      x: sampleOtuID,
-      y: sampleValue,
+      x: otu_ids,
+      y: sample_values,
       type: "bubble",
-      text: sampleOtuLabel,
+      text: otu_labels,
       hoverinfo: "x+y+text",
       mode: "markers",
-      marker: {size: sampleValue, color:sampleOtuID, colorscale: "Earth"}
+      marker: {size: sample_values , color:otu_ids, colorscale: "Earth"}
     };
 
-    // 2. Create the layout for the bubble chart.
+    //Create the layout for the bubble chart.
     var bubbleLayout = {
       title: {
         text: "<b>Bacteria Cultures Per Sample</b>",
